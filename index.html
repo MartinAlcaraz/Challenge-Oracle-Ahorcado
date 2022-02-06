@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+
+
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="https://www.aluracursos.com/" target="_blank"> <img src="img/Logo-alura.png" width="20px"> </a>
+  </header>
+
+  <main>
+    <div id="pag-principal">
+      <button class="btn-azul" id="pag-principal-btn-azul">Iniciar juego</button>
+      <button class="btn-gris" id="pag-principal-btn-gris">Agregar nueva palabra</button>
+    </div>
+
+    <div id="pag-agregar-palabra">
+      <div>
+        <p></p>
+      </div>
+
+      <div> <input type="text" placeholder="Ingrese una palabra"></div>
+      
+      <div id="botones-agregar">
+        <p id="ayuda"><img src="img/Exclamation_encircled.png" height="12px"> Maximo de 8 letras</p>
+        <button class="btn-azul">Guardar y empezar</button>
+        
+        <button class="btn-gris">Cancelar</button>
+      </div>
+    </div>
+
+    <div id="pag-jugar">
+      <div id="pag-jugar-01">
+        <canvas width="600px" height="520px"></canvas>
+      </div>
+      
+      <div id="pag-jugar-02">
+        <button class="btn-azul">Nuevo juego</button>
+        &nbsp; &nbsp;
+        <button class="btn-gris">Desistir</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Creado por A. Martin Alcaraz.</p>
+    <a href="https://github.com/MartinAlcaraz" target="_blank"> <img src="img/github-logo.png" title="logo GitHub"
+        width="50px"> </a>
+  </footer>
+  <script type="text/javascript" src="inicio.js"></script>
+  <script type="text/javascript" src="canvas.js"></script>
+  <script type="text/javascript" src="jugar.js"></script>
+  <script type="text/javascript" src="agragar-palabra.js"></script>
+</body>
+
+</html>
