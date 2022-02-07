@@ -48,7 +48,7 @@ input::placeholder{
   color: var(--blue);
   font-weight: bold;
   font-family: 'Inter', sans-serif;
-  font-size: 20px;  
+  
 }
 
 #pag-principal{
@@ -59,25 +59,22 @@ input::placeholder{
   flex-direction: column;
 }
 
-#pag-principal .btn-azul{
+#pag-principal button{
   padding: 24px;
   margin: 10px 0px;
   font-size: 14px;
-  width: 30vw;
-  
   font-weight: bold;
 }
 
+#pag-principal .btn-azul{
+  width: 30vw;
+}
 
 #pag-principal .btn-gris{
-  padding: 14px;
-  margin: 10px 0px;
   
-  font-size: 14px;
   text-align: center;
   width: 26vw;
   
-  font-weight: bold;
 }
 
 
@@ -91,14 +88,10 @@ input::placeholder{
 }
 
 #pag-agregar-palabra div{
-  margin-top: 15vh;
+  margin-top: 0vh;
   margin-left: 20vw;
   margin-right: 20vw;
-  
   height: 5vh;
-}
-#pag-agregar-palabra #texto{
-  margin: 0 40%;
 }
 
 #pag-agregar-palabra p{
@@ -106,6 +99,11 @@ input::placeholder{
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+#botones-agregar{
+  padding-top: 30vh;
+}
+
 #botones-agregar p{
   color: var(--blue);
   font-size: small;
@@ -141,13 +139,11 @@ button:active{
   border-radius: 24px;
 }
 
-
 #pag-jugar{
-
   height: 80vh;
-  width: 100%;
-  
+  width: 100%;  
 }
+
 #pag-jugar-01{
   overflow: hidden;
   display: flex;
@@ -157,14 +153,9 @@ button:active{
   height: 94%;
 }
 
-#pag-jugar-01 canvas{
-
-
-}
 canvas{   
   height: 100%;
-  margin: 0 auto;
-  
+  margin: 0 auto;  
   display: block;
   background-color: var(--grey);   
 }
