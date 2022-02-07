@@ -195,7 +195,9 @@ body.addEventListener("keypress", (event) => {
 
 });
 
-
+pantalla.addEventListener("click", () => {
+   inputInvisible.focus();
+});
 
 
 
