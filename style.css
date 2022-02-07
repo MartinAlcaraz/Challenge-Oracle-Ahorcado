@@ -67,6 +67,7 @@ input::placeholder{
 }
 
 #pag-principal .btn-azul{
+  height: 18vh;
   width: 30vw;
 }
 
