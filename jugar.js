@@ -195,17 +195,7 @@ body.addEventListener("keypress", (event) => {
 
 });
 
-pantalla.addEventListener("click", () => {
-   inputInvisible.focus();
-});
 
-inputInvisible.addEventListener("keypress", (event) => {
-   let tecla= event.key;
-   if ( (pagJugar.style.display === "block") && (tecla != "Enter") ) {
-      jugar(tecla);
-   }
-
-});
 
 
 

@@ -14,7 +14,6 @@ const textoAyuda= pagAgregarPalabra.querySelector("#ayuda");
 
 const btnNuevoJuego = pagJugar.querySelector(".btn-azul");
 const btnDesistir = pagJugar.querySelector(".btn-gris");
-const inputInvisible = pagJugar.querySelector("#texto-jugar");
 
 //pagPrincipal.style.display= "none";
 pagAgregarPalabra.style.display= "none";
@@ -27,7 +26,6 @@ botonIniciarJuego.addEventListener("click", () => {
    pagPrincipal.style.display= "none";
    pagJugar.style.display= "block";   
    iniciarJuego();
-   inputInvisible.focus();
 });
 
       // se muestra el bloque pagina-agregar-palabra
