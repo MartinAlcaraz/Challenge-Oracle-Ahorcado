@@ -3,7 +3,6 @@ const pagPrincipal= document.querySelector("#pag-principal");
 const pagAgregarPalabra= document.querySelector("#pag-agregar-palabra");
 const pagJugar= document.querySelector("#pag-jugar");
 
-
 const textoEntrada= pagAgregarPalabra.querySelector("input");
 
 const botonIniciarJuego = document.querySelector("#pag-principal-btn-azul");
@@ -15,7 +14,6 @@ const textoAyuda= pagAgregarPalabra.querySelector("#ayuda");
 
 const btnNuevoJuego = pagJugar.querySelector(".btn-azul");
 const btnDesistir = pagJugar.querySelector(".btn-gris");
-const entradaJuego = pagJugar.querySelector("entrada-juego");
 
 //pagPrincipal.style.display= "none";
 pagAgregarPalabra.style.display= "none";
