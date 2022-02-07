@@ -211,4 +211,9 @@ footer p{
   font-weight: bold;
 }
 
+#texto-jugar{
+  visibility: hidden; 
+  position: fixed; 
+  left: -300px;
+}
 
