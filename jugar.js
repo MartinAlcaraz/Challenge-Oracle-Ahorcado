@@ -203,7 +203,7 @@ body.addEventListener("keypress", (event) => {
 function esMobile(info) {
 
    if (info.indexOf('mobile') != -1) {
-      console.log("es mobile");
+      
       return true;
    }
    return false;
@@ -229,7 +229,6 @@ pantalla.addEventListener("click", () => {
 function comprobarSiNecesitaTecladoVirtual(){
 
    let infoSO = window.navigator.appVersion.toLowerCase();
-   console.log(infoSO);
    
    if ( esMobile(infoSO) ) {
       mostrarTecladoVirtual = true;
