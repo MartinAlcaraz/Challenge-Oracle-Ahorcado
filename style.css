@@ -145,7 +145,7 @@ button:active{
   width: 100%;  
 }
 
-#pag-jugar-01{
+#pag-jugar-canvas{
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -161,17 +161,17 @@ canvas{
   background-color: var(--grey);   
 }
 
-#pag-jugar-02{
+#pag-jugar-botones{
 
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;  
 }
 #teclado{
-  background-color: orange;
+  background-color: rgb(79, 77, 74);
   width: 100%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   
@@ -184,6 +184,7 @@ canvas{
   margin: 1px;
   padding: 4px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 #pag-jugar .btn-azul{

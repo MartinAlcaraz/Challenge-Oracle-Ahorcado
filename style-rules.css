@@ -1,59 +1,67 @@
+@media screen and (max-width:768px) { 
+   header img { 
+      margin-left:5vw 
+   } 
 
-         /* For tablets: */
-@media screen and (max-width: 768px)  {
-      
-   header img{
-      margin-left: 5vw;
-   }
-   
-   #pag-principal button{
-      padding: 24px;
-      margin: 20px 0px 0px;
-    }
-    
-    #pag-principal .btn-azul{
-      height: 15vh;
-      width: 40vw;
-    }
-    
-    #pag-principal .btn-gris{ 
-      width: 38vw;
-    }
+   #pag-principal button { 
+      padding:24px; 
+      margin:20px 0 0 
+   } 
 
-   #pag-agregar-palabra div{
-      margin-top: 5vh;
-      margin-left: 5vw;
-      margin-right: 0;      
-      height: 5vh;
-    }
+   #pag-principal .btn-azul { 
+      height:15vh; 
+      width:40vw 
+   } 
 
-    #botones-agregar {
-       padding-top: 40vh;
-       padding-bottom: 0;
-    }
+   #pag-principal .btn-gris { width:38vw } 
 
-    #botones-agregar button{
-      padding: 3vh 6vw;    
-      margin-top: -10px;
-      font-size: 12px;    width: 49%;
-      font-weight: bold;
-    }
-    
-    #pag-jugar-02{
-      width: 90%;
-      margin: 0 auto;
-   }
-    #pag-jugar .btn-azul{
-      width: 49%;
-    }
+   #pag-agregar-palabra div { margin-top:5vh; margin-left:5vw; margin-right:0; height:5vh } 
 
-    #pag-jugar .btn-gris{
-      width: 49%;
-   }
- 
+   #botones-agregar { padding-top:40vh; padding-bottom:0 } 
 
+   #botones-agregar button { padding:3vh 6vw; margin-top:-10px; font-size:12px; width:49%; font-weight:700 } 
+
+   #pag-jugar-botones { width:90%; margin:0 auto } 
+
+   #pag-jugar .btn-azul { width:49% } 
+
+
+   #pag-jugar .btn-gris { width:49% } 
  }
+@media screen and (max-width:600px) { 
+   body { 
+      margin:0 0 5vh 
+   } 
 
-   
- 
+   header img { height:8vh; width:auto; margin-top:3vh; margin-left:4vh } 
 
+   #pag-principal { display:flex; height:100%; align-items:center; justify-content:center; flex-direction:column } 
+
+   #pag-principal .btn-azul { height:20vh; width:82%; border-radius:24px } 
+
+   #pag-principal .btn-gris { height:12vh; width:76%; border-radius:24px } 
+
+   #pag-agregar-palabra { height:80vh; width:100%; flex-flow:wrap } 
+
+   input { font-size:26px } 
+
+   #pag-agregar-palabra div { margin-top:0vh; margin-left:5vw; margin-right:5vw; height:1vh } 
+
+   #botones-agregar { padding-top:39vh } 
+
+   #botones-agregar p { font-size:18px; margin-bottom: -0.5vh } 
+
+   #botones-agregar button { padding:4vh 3vw; margin-top:3vh; font-size:18px; width:98% } 
+
+   #botones-agregar img { height:2.5vh; width:auto } 
+
+   #pag-jugar-canvas { height:70%; width:auto } 
+
+   #pag-jugar-botones { flex-direction:column; width:100%; height:40% } 
+
+   #pag-jugar .btn-azul { padding:20px; margin-top:0; font-size:20px; width:80% } 
+
+   #pag-jugar .btn-gris { padding:20px; margin:-20px 0 30px; font-size:20px; width:80% } 
+
+   footer { margin-top:50px } 
+ }

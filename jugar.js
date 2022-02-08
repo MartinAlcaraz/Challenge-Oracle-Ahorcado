@@ -196,6 +196,34 @@ body.addEventListener("keypress", (event) => {
 });
 
 
+pantalla.addEventListener("click", () => {
+   if (botonesJugar.style.display === "flex"){
+      botonesJugar.style.display = "none";
+      teclado.style.display = "flex";
+   }else{
+      teclado.style.display = "none";
+      botonesJugar.style.display = "flex";
+   }
+});
+
+const botonesTeclado = teclado.getElementsByTagName("button");
+
+function teclaVirtualPresionada(){
+   let tecla = this.textContent;
+   jugar(tecla);
+}
+
+function crearBotonesTeclado(){
+ 
+   for (let i=0; i < botonesTeclado.length; i++){
+      let boton= botonesTeclado[i];
+      boton.addEventListener("click", teclaVirtualPresionada);
+   }
+
+}
+
+crearBotonesTeclado();
+
 
 
 

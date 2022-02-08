@@ -12,6 +12,9 @@ const btnGuardar = pagAgregarPalabra.querySelector(".btn-azul");
 const btnCancelar = pagAgregarPalabra.querySelector(".btn-gris");
 const textoAyuda= pagAgregarPalabra.querySelector("#ayuda");
 
+const botonesJugar = pagJugar.querySelector("#pag-jugar-botones");
+const teclado = pagJugar.querySelector("#teclado");
+
 const btnNuevoJuego = pagJugar.querySelector(".btn-azul");
 const btnDesistir = pagJugar.querySelector(".btn-gris");
 
