@@ -29,6 +29,7 @@ botonIniciarJuego.addEventListener("click", () => {
    pagPrincipal.style.display= "none";
    pagJugar.style.display= "block";   
    iniciarJuego();
+   
 });
 
       // se muestra el bloque pagina-agregar-palabra

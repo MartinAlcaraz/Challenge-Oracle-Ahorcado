@@ -1,9 +1,12 @@
 
 let body = document.querySelector("body");
 
+const botonesTeclado = teclado.getElementsByTagName("button");
 const maximoErrores = 7;		// cantidad de veces q se puede equivocar
 let errores = 0;				// contador de errores
 let estaVivo = true;
+
+let mostrarTecladoVirtual;
 
 let arrayDibujarHorca = [dibujarHorca, dibujarCabeza, dibujarCuerpo, dibujarBrazoDerecho, dibujarBrazoIzquierdo, dibujarPiernaDerecha, dibujarPiernaIzquierda];
 
@@ -140,7 +143,7 @@ function letraValida(tecla) {
    return exp.test(tecla);
 }
 
-function dibujarSolucion(){
+function dibujarSolucion() {
    dibujarLetrasIncorrectas(palabra.join(""));
 }
 
@@ -149,8 +152,9 @@ function dibujarUnaParteDeLaHorca(parte) {
 }                                     // en el arreglo   
 
 function jugar(letra) {
+   
    if (estaVivo && letraValida(letra)) {
-      
+
       if (!letrasIngresadas.includes(letra)) {  // si la letra no se ingresó antes
 
          if (palabraAux.includes(letra)) {      // si la letra esta en la palabra
@@ -166,7 +170,7 @@ function jugar(letra) {
 
             if (palabraAux.length == 0) {
                setTimeout(dibujarGanaste, 500);
-               estaVivo= false;
+               estaVivo = false;
             }
          } else {
 
@@ -175,10 +179,10 @@ function jugar(letra) {
             dibujarLetrasIncorrectas(letrasIncorrectas);
             errores += 1;
 
-            if (errores == maximoErrores) {               
+            if (errores == maximoErrores) {
                setTimeout(dibujarPerdiste, 300);
-               setTimeout( dibujarSolucion, 500 );  // escribe la palabra buscada
-               
+               setTimeout(dibujarSolucion, 500);  // escribe la palabra buscada
+
                estaVivo = false;
             }
          }
@@ -187,42 +191,70 @@ function jugar(letra) {
    }
 }
 
+
 body.addEventListener("keypress", (event) => {
    let tecla = event.key;
-   if ( (pagJugar.style.display === "block") && (tecla != "Enter") ) {
+   if ((pagJugar.style.display === "block") && (tecla != "Enter")) {
       jugar(tecla);
    }
 
 });
 
+function esMobile(info) {
+
+   if (info.indexOf('mobile') != -1) {
+      console.log("es mobile");
+      return true;
+   }
+   return false;
+}
+
+
+// al tocar la pantalla se muestra/esconde el teclado virtual
 
 pantalla.addEventListener("click", () => {
-   if (botonesJugar.style.display === "flex"){
-      botonesJugar.style.display = "none";
-      teclado.style.display = "flex";
-   }else{
-      teclado.style.display = "none";
-      botonesJugar.style.display = "flex";
+
+   if ( mostrarTecladoVirtual ) {
+
+      if (botonesJugar.style.display === "flex") {
+         botonesJugar.style.display = "none";
+         teclado.style.display = "flex";
+      } else {
+         teclado.style.display = "none";
+         botonesJugar.style.display = "flex";
+      }
    }
 });
 
-const botonesTeclado = teclado.getElementsByTagName("button");
+function comprobarSiNecesitaTecladoVirtual(){
 
-function teclaVirtualPresionada(){
+   let infoSO = window.navigator.appVersion.toLowerCase();
+   console.log(infoSO);
+   
+   if ( esMobile(infoSO) ) {
+      mostrarTecladoVirtual = true;
+      crearBotonesTeclado();
+   }else{
+      mostrarTecladoVirtual = false;
+   }
+}
+
+
+function teclaVirtualPresionada() {
    let tecla = this.textContent;
    jugar(tecla);
 }
 
-function crearBotonesTeclado(){
- 
-   for (let i=0; i < botonesTeclado.length; i++){
-      let boton= botonesTeclado[i];
+function crearBotonesTeclado() {
+
+   for (let i = 0; i < botonesTeclado.length; i++) {
+      let boton = botonesTeclado[i];
       boton.addEventListener("click", teclaVirtualPresionada);
    }
-
 }
 
-crearBotonesTeclado();
+comprobarSiNecesitaTecladoVirtual();
+
 
 
 
