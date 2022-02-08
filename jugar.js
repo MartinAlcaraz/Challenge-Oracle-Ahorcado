@@ -201,9 +201,7 @@ body.addEventListener("keypress", (event) => {
 });
 
 function esMobile(info) {
-
-   if (info.indexOf('mobile') != -1) {
-      
+   if (info.indexOf('mobile') != -1) {  
       return true;
    }
    return false;
