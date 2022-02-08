@@ -162,12 +162,29 @@ canvas{
 }
 
 #pag-jugar-02{
-  display: flex;
+
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100%;  
 }
+#teclado{
+  background-color: orange;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
 
+#teclado button{
+  background-color: var(--grey);
+  border: 2px solid var(--blue);
+  width: 10vw;  
+  margin: 1px;
+  padding: 4px;
+  font-weight: bold;
+}
 
 #pag-jugar .btn-azul{
   padding: 10px;    margin: 5px 0px;
